@@ -32,17 +32,29 @@
 
         // Get initial active
         var hash = window.location.hash;
+        var location = window.location.href;
         if (hash == null || hash.length == 0) {
           hash = "#home";
+        } else {
+          location = location.substring(0, location.length - hash.length);
         }
-        $("li:has(a[href=" + hash + "])").each(function(){
+        $("#tabs > li:has(a[href=" + hash + "])").each(function(){
           showTab($(this));
         });
 
-        // Switch visible tab
-        $("#tabs > li").click(function() {
-          hideTab($("li.active"));
-          showTab($(this));
+        // Switch visible tab links
+        $("#tabs > li").each(function() {
+          var li = $(this);
+          $(this).children("a").each(function(){
+            var href = this.href;
+            if (href.indexOf(location) == 0) {
+              var selector = "a[href=" + href.substring(location.length) + "]";
+              $(selector).click(function(){
+                hideTab($("li.active"));
+                showTab(li);
+              });              
+            }
+          });
         });
       
       });
@@ -77,7 +89,7 @@
         <div class="hero-unit">
           <h1>Marseille Java User Group</h1>
           <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          <p><a class="btn primary large">Contactez nous &raquo;</a></p>
+          <p><a class="btn primary large" href="#contact">Contactez nous &raquo;</a></p>
         </div>
   
         <div class="row">
