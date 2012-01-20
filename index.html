@@ -32,7 +32,7 @@
 
         // Get initial active
         var hash = window.location.hash;
-        if (hash == null) {
+        if (hash == null || hash.length == 0) {
           hash = "#home";
         }
         $("li:has(a[href=" + hash + "])").each(function(){
