@@ -4,44 +4,97 @@
 <head>
     <title>Marseille Java User Group</title>
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <script src="js/jquery-1.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+      
+        hideTab = function(tab) {
+          tab.removeClass("active");
+          tab.children().each(function(){
+            var id = $(this).attr("href");
+            $(id).hide();
+          })
+        }
+      
+        showTab = function(tab) {
+          tab.addClass("active");
+          tab.children().each(function(){
+            var id = $(this).attr("href");
+            $(id).show();
+          })
+        }
+
+        // Init tabs
+        $("#tabs > li").each(function(index){
+          if (index == 0) {
+            showTab($(this));
+          } else {
+            hideTab($(this));
+          }
+        });
+      
+        // Switch visible tab
+        $("#tabs > li").click(function() {
+          hideTab($("li.active"));
+          showTab($(this));
+        });
+      
+      });
+    </script>
+    
 </head>
 <body style="padding-top: 64px;">
 
-<div class="topbar">
-  <div class="fill">
+  <div>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><a href="#">MarsJUG</a></h3>
+          <ul id="tabs">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#reunions">R&eacute;unions</a></li>
+            <!--
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Partenaires</a></li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <h3><a href="#">MarsJUG</a></h3>
-      <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">R&eacute;unions</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Sponsors</a></li>
-        <li><a href="#">Partenaires</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-<div class="container">
+      <div id="home">
 
-  <div class="hero-unit">
-    <h1>Marseille Java User Group</h1>
-    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-    <p><a class="btn primary large">Contactez nous &raquo;</a></p>
-  </div>
+        <div class="hero-unit">
+          <h1>Marseille Java User Group</h1>
+          <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          <p><a class="btn primary large">Contactez nous &raquo;</a></p>
+        </div>
   
-  <div class="row">
-    <div class="span8">
-      <h2>Notre prochaine r&eacute;union</h2>
-      <p>Soir&eacute;e Eclipse Link le 19 janvier 2012</h2>
-    </div>
-    <div class="span8">
-      <h2>Partneraires Devoxx France 2012</h2>
-      <p><a href="http://reg.devoxx.fr/" imageanchor="1" target="_blank"><img border="0" src="http://www.marsjug.org/_/rsrc/1321808591298/Home/Cadre-Devoxx-.png"/></a></h2>
-    </div>
-  </div>
+        <div class="row">
+          <div class="span8">
+            <h2>Notre prochaine r&eacute;union</h2>
+            <p>Soir&eacute;e Eclipse Link le 19 janvier 2012</h2>
+          </div>
+          <div class="span8">
+            <h2>Partneraires Devoxx France 2012</h2>
+            <p><a href="http://reg.devoxx.fr/" imageanchor="1" target="_blank"><img border="0" src="http://www.marsjug.org/_/rsrc/1321808591298/Home/Cadre-Devoxx-.png"/></a></h2>
+          </div>
+        </div>
+  
+      </div>
 
-</div>
+      <div id="reunions">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta nibh vel felis lobortis tempor. Donec eu velit sit amet tellus imperdiet fringilla vitae eget justo. Aenean pulvinar fermentum quam, et facilisis nunc sollicitudin vel. Morbi eu elit id lectus interdum consectetur non ut dolor. Etiam aliquam pretium volutpat. Aliquam vulputate sagittis turpis, quis rutrum ipsum congue at. Fusce eget elementum diam. Maecenas in sem leo. Suspendisse viverra ipsum sed metus sagittis fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum tellus nec nibh iaculis sit amet porta erat luctus. Cras in faucibus tortor. In egestas justo quis mi ornare at ultrices velit molestie. Sed sit amet dolor dui.</p>
+      </div>
+
+    </div>
+  
+  </div>
 
 </body>
 </html>
