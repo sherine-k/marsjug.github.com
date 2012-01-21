@@ -35,7 +35,7 @@
         });
         
         // Set the content of the next reunion
-        var truncated = $("#prochaine-reunion").text() + ": "  + $("#prochaine-intervention").text().substring(0, 100);
+        var truncated = $("#prochaine-reunion").text() + ": "  + $("#prochaine-intervention").text().substring(0, 256);
         $("#cible-prochaine-reunion").html(truncated);
         
         // The page navigation
@@ -93,7 +93,7 @@
           </div>
           <div class="span-one-third">
             <h3>Notre prochaine r&eacute;union</h3>
-            <p><span id="cible-prochaine-reunion"></span>... <a href="#reunions" style="hover:none">[Suite]</a></p>
+            <p><span id="cible-prochaine-reunion"></span> ... <a href="#reunions" style="hover:none">[Suite]</a></p>
           </div>
           <div class="spanspan-one-third8">
             <h3>Partenaires Devoxx France 2012</h3>
@@ -107,19 +107,29 @@
 
         <div class="span11">
       
-          <h1 id="prochaine-reunion">Soir&eacute;e EclipseLink le 19 Janvier 2012</h1>
-          <h2>A propos de Shaun Smith</h2>
-          <p>Shaun Smith travaille &agrave; Oracle sur EclipseLink. Il viendra nous faire le plaisir de nous pr&eacute;senter tout &ccedil;a.</p>
+          <h1 id="prochaine-reunion">Soir&eacute;e Spring 3.1 le 23 f&eacute;vrier 2012</h1>
+          <h2>A propos de Gildas Cuisinier</h2>
+          <p>Gildas Cuisinier, consultant au Luxembourg, est connu pour son activit&eacute; pour la communaut&eacute; Spring francophone.
+          Il est &agrave; l'origine de la section Spring de Developpez.com laquelle comprend forum, blog, cours, articles techniques,
+          interview et FAQ.</p>
+          <p>Il a &eacute;galement particip&eacute; &agrave; la relecture de plusieurs ouvrages sur Spring (Spring par la pratique
+          et Spring Dynamic Modules in Action) et s'est engag&eacute; dans l'&eacute;vangélisation de Spring 3.0 par le biais
+          de conf&eacute;rences dans plusieurs JUG en France et au Luxembourg. Il a &eacute;galement apport&eacute; la base du support
+          de XMPP/Jabber de Spring WebServices.</p>
+          <p>En dehors du monde Spring, il a &eacute;galement collabor&eacute; avec Henri Gomez pour fournir un packaging d'OpenJDK
+          pour Mac OS X.<P/>
+
           <h2>A propos de l'intervention</h2>
-          <p id="prochaine-intervention">D&egrave;s que l'on parle d'ORM ou de persistence, on pense bri&egrave;vement &agrave; JPA puis on parle d'Hibernate, mais on oublie
-          souvent que l'impl&eacute;mentation de r&eacute;f&eacute;rence de JPA c´est EclipseLink. Eh bien ce soir nous allons
-          rectifier le tir, et vous pr&eacute;senter non seulement EclipseLink, mais encore mieux nous allons voir des aspects
-          tr&egrave;s pratiques de son utilisation.</p>
-          <p>En premier nous allons ainsi voir comment utiliser EclipseLink pour r&eacute;aliser des applications Web RESTful, puis nous
-          allons d&eacute;couvrir comment r&eacute;soudre les probl&egrave;mes de multitenancy</p>
+          <p id="prochaine-intervention">Spring est mort, longue vie &agrave; Spring !</p>
+          <p>Cette session pr&eacute;sente les nouveaut&eacute;s apport&eacute;es par Spring Framework 3.1 pour simplifier
+          les d&eacute;veloppements d'applications d'entreprises en Java en tirant profit des nouveaut&eacute;s de JEE 6 !</p>
+          <p>Spring, mais sans une dose de XML !</p>
+          <p>Il vous sera &eacute;galement pr&eacute;sent&eacute; comment cr&eacute;er des livrables d&eacute;ployables sur
+          plusieurs environnements (dev, test, prod par exemple) sans modification de l'art&eacute;fact.</p>
+
           <h2>A propos de la soir&eacute;e</h2>
-          <p>Inscription: sur <a href="http://www.jugevents.org/jugevents/event/show.html?id=43373">JUG Events.</a></p>
-          <p>La session du Mars JUG se tiendra &agrave; l'&eacute;cole Supinfo &agrave; partir de 19H30 le jeudi 19 Janvier 2012.</p>
+          <p>Inscription: sur <a href="http://jugevents.org/jugevents/event/43769">JUG Events.</a></p>
+          <p>La session du Mars JUG se tiendra &agrave; l'&eacute;cole Supinfo &agrave; partir de 19H30 le jeudi 23 f&eacute;vrier 2012.</p>
 
         </div>
 
