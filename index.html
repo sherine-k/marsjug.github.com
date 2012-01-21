@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <script src="js/jquery-1.7.1.min.js"></script>
+    <!-- Doc here : http://www.asual.com/jquery/address/docs/ -->
+    <script src="js/jquery.address-1.4.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -31,39 +33,22 @@
         $("#tabs > li").each(function(index){
           hideTab($(this));
         });
-
-        // Get initial active
-        var hash = window.location.hash;
-        var location = window.location.href;
-        if (hash == null || hash.length == 0) {
-          hash = "#home";
-        } else {
-          location = location.substring(0, location.length - hash.length);
-        }
-        $("#tabs > li:has(a[href=" + hash + "])").each(function(){
-          showTab($(this));
-        });
-
-        // Switch visible tab links
-        $("#tabs > li").each(function() {
-          var li = $(this);
-          $(this).children("a").each(function(){
-            var href = this.href;
-            if (href.indexOf(location) == 0) {
-              var selector = "a[href=" + href.substring(location.length) + "]";
-              $(selector).click(function(){
-                hideTab($("li.active"));
-                showTab(li);
-              });              
-            }
-          });
-        });
         
         // Set the content of the next reunion
         var truncated = $("#prochaine-reunion").text() + ": "  + $("#prochaine-intervention").text().substring(0, 100);
         $("#cible-prochaine-reunion").html(truncated);
-
-      
+        
+        // The page navigation
+        $.address.change(function(event){
+          var hash = "#" + event.value.substring(1);
+          if (hash == "#")
+            hash = "#home";
+          var selector = "#tabs > li:has(a[href=" + hash + "])";
+          hideTab($("li.active"));
+          $(selector).each(function() {
+            showTab($(this));
+          });
+        });
       });
     </script>
     
