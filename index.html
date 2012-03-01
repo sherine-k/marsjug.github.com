@@ -35,9 +35,15 @@
         });
         
         // Set the content of the next reunion
-        var truncated = $("#prochaine-reunion").text() + ": "  + $("#prochaine-intervention").text().substring(0, 256);
-        $("#cible-prochaine-reunion").html(truncated);
-        
+        var truncated = $("#intervention").text().substring(0, 256);
+        $("#cible-intervention").html(truncated);
+
+        // Set the next reunion date        
+        $("#cible-titre").html($("#titre").html());
+
+        // Set the next reunion date        
+        $("#cible-date").html($("#date").html());
+
         // The page navigation
         $.address.change(function(event){
           var hash = "#" + event.value.substring(1);
@@ -94,8 +100,9 @@
             </address>
           </div>
           <div class="span-one-third">
-            <h3>Notre prochaine r&eacute;union</h3>
-            <p><span id="cible-prochaine-reunion"></span> ... <a href="#reunions" style="hover:none">[Suite]</a></p>
+            <h3 id="cible-date"></h3>
+            <h4 id="cible-titre"></h4>
+            <p><span id="cible-intervention"></span> ... <a href="#reunions" style="hover:none">[Suite]</a></p>
           </div>
           <div class="spanspan-one-third8">
             <h3>Partenaires Devoxx France 2012</h3>
@@ -109,7 +116,9 @@
 
         <div class="span11">
       
-          <h1 id="prochaine-reunion">Performance des serveurs en Java le 22 mars 2012 : L'exp&eacute;rience du projet OpenDJ</h1>
+          <h1 id="date">Jeudi 22 mars 2012</h1>
+          <h1 id="titre">Performance des serveurs en Java</h1>
+          <h1>L'exp&eacute;rience du projet OpenDJ</h1>
           
           <h2>A propos de Ludovic Poitou</h2>
           
@@ -120,7 +129,7 @@
           open source en Java.</p>
 
           <h2>A propos de l'intervention</h2>
-          <p id="prochaine-intervention">Java et Performance n'ont pas la r&eacute;putation d'&ecirc;tre bons amis. Quand on a un produit &eacute;crit en C,
+          <p id="intervention">Java et Performance n'ont pas la r&eacute;putation d'&ecirc;tre bons amis. Quand on a un produit &eacute;crit en C,
           leader de son march&eacute;, &agrave; quoi peut-on s'attendre en le r&eacute;-&eacute;crivant en Java ?</p>
           <p>Ludovic vous racontera comment les ing&eacute;nieurs de Sun ont con&ccedil;u un serveur d'annuaire ultra-performant en Java, et partagera leur
           exp&eacute;rience, les outils et astuces et vous guidera dans les arcanes de la gestion m&eacute;moire de la JVM.</p>
