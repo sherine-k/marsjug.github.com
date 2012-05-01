@@ -36,7 +36,7 @@
         });
         
         // Set the content of the next reunion
-        var truncated = $("#intervention").text().substring(0, 256);
+        var truncated = $("#intervention").html();
         $("#cible-intervention").html(truncated);
 
         // Set the next reunion date        
@@ -118,7 +118,7 @@
         <div class="span9">
       
           <h1 id="date">Jeudi 24 mai 2012</h1>
-          <h1 id="titre">Introduction au langage Ceylon</h1>
+          <h1 id="titre">Spécial Devoxx : CRaSH et Ceylon</h1>
           
           <h2>A propos de St&eacute;phane Epardaud</h2>
           
@@ -136,11 +136,24 @@
 
           <h2>A propos de l'intervention</h2>
 
-          <p id="intervention">Ceylon est un nouveau langage de programmation pour la machine virtuelle Java. Nous sommes fans de Java et de son
-          &eacute;cosysteme, cependant nous pensons que le langage Java et ses libraires con&ccedil;us il y a 15 ans sont d&eacute;suets face aux challenges
-          actuels.</p>
+          <div id="intervention">
+            <p>De retour de Devoxx nous vous ramenons deux présentations de la conférence:</p>
+            <ul>
+              <li>Quickie : CRaSH un Shell pour étendre la JVM</li>
+              <li>Conférence : introduction au language Ceylon</li>
+            </ul>
+          </div>
           
-          <p>Ceylon a &eacute;t&eacute; con&ccedil;u avec plusieurs objectifs
+          <h3>CRaSH</h3>
+          
+          <p>CRaSH est un shell open source étendant la machine virtuelle java avec puissance et facilité. Un utilisateur peut se connecter au shell par les protocoles SSH ou Telnet.</p>
+          <p>Les commandes de CRaSH sont écrites dans le language Groovy et peuvent être développées en temps réel, permettant d'étendre le shell facilement et très rapidement. CRaSH est fourni avec un ensemble de commandes de bases tels que la gestion de thread, la gestion de log our l'accès à la base de données.</p>
+          
+          <h3>Ceylon</h3>
+          
+          <p>Ceylon est un nouveau langage de programmation pour la machine virtuelle Java. Nous sommes fans de Java et de son &eacute;cosysteme, cependant nous pensons que le langage Java et ses libraires con&ccedil;us il y a 15 ans sont d&eacute;suets face aux challenges actuels.</p>
+  
+            <p>Ceylon a &eacute;t&eacute; con&ccedil;u avec plusieurs objectifs
             <ul>
               <li>Facile &agrave; apprendre pour les d&eacute;veloppeurs Java et C#</li>
               <li>Am&eacute;liorer le typage fort de Java</li>
