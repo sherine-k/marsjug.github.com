@@ -36,7 +36,7 @@
         });
         
         // Set the content of the next reunion
-        var truncated = $("#intervention").html();
+        var truncated = $("#intervention").text().substring(0, 256);
         $("#cible-intervention").html(truncated);
 
         // Set the next reunion date        
@@ -117,65 +117,47 @@
 
         <div class="span9">
       
-          <h1 id="date">Jeudi 24 mai 2012</h1>
-          <h1 id="titre">Spécial Devoxx : CRaSH et Ceylon</h1>
+          <h1 id="date">Mardi 19 juin 2012</h1>
+          <h1 id="titre">Manipulation de bytecode : démocratisons la magie noire ! (MarsJUG remix)</h1>
           
-          <h2>A propos de St&eacute;phane Epardaud</h2>
+          <h2>A propos de Julien Ponge</h2>
           
-          <p>Depuis les hautes montagnes de Nice, St&eacute;phane travaille pour Red Hat sur le project Ceylon.</p>
+          <p>Julien Ponge est actuellement Maître de Conférences en Informatique à l'INSA de Lyon / Télécom et chercheur au sein du laboratoire CITI. Il s'intéresse plus particulièrement aux approches combinant les interactions entre middlewares, langages et machines virtuelles pour systèmes dynamiques.</p>
 
-          <p>C'est un hacker passionn&eacute; de Java, C, Perl ou Scheme. Enthousiaste des standards web et des bases de donn&eacute;es,
-          il a travaill&eacute; sur divers projets tel qu'un &eacute;diteur XML WYSIWYG, une libraire de multi-threading enn C, un langage pour agents mobiles
-          en Scheme (compilateur et machines virtuelles), ainsi que des services web 2.0 RESTful et une interfaces web riches en HTML 5 / Javascript.</p>
+          <p>Julien est également un acteur Java / opensource de longue date ayant crée le framework d'installation IzPack. Il a également participé à d'autres projets comme GlassFish et Codehaus Mojo. Il intervient régulièrement dans des conférences industrielles telles Devoxx ainsi que dans des JUGs. Enfin, il est rédacteur technique pour le Oracle Technology Network et Oracle Java Magazine.</p>
 
-          <p>Avide de partage de connaissance, il va souvent pr&ecirc;cher sa paroisse dans des conf&eacute;rences tels que           
-          Scheme Workshop 2004, Nice Technical University en 2008, Polytech'Nice en 2009, le Mars JUG, le Paris JUG et le Riviera Java User Group
-          qu'il a cr&eacute;e avec Nicolas Leroux. Acteur passionn&eacute; d'open source depuis le d&eacute;but, il contribute au projet RESTEasy,
-          et cr&eacute;e les projets jax-doclets, stamps.js, quelques modules de Play! Framework et d&eacute;veloppe des projets Ceylon pour
-          Red Hat.</p>
+          <p>Julien est Docteur en Informatique de l'Université Blaise Pascal (Clermont-Ferrand) ainsi que de l'UNSW (Sydney).</p>
 
           <h2>A propos de l'intervention</h2>
 
           <div id="intervention">
-            <p>De retour de Devoxx nous vous ramenons deux présentations de la conférence:</p>
+            <p>
+            Java ne se limite pas au langage éponyme : sa machine virtuelle est capable d'exécuter du bytecode produit par un très large panel de langages. Peu d'entre nous ont eu de bonnes raisons d'avoir à comprendre, générer ou transformer du bytecode Java. Il serait pourtant réducteur de limiter cette activité à une magie noire réservée aux créateurs de langages et de frameworks évolués. À titre d'exemple, la manipulation de bytecode est une des clés de voute de la simplification des modèles de programmation pour les plates-formes répandues que sont Java EE, Play! ou Spring.</p>
+
+            <p>Cette session s'adresse à un public de tous niveaux et a pour but non seulement de démystifier le bytecode Java, mais aussi de montrer en quoi cela peut être utile dans des cadres applicatifs plus classiques.</p>
+
             <ul>
-              <li>Quickie : CRaSH un Shell pour étendre la JVM</li>
-              <li>Conférence : introduction au language Ceylon</li>
-            </ul>
+
+
+<li>Bases du bytecode Java et de la JVM</li>
+<li>Manipulation et applications avec :</li>
+<li>ASM</li>
+<li>AspectJ</li>
+<li>JBoss Byteman</li>
+<li>Java 7 et invokedynamic</li>
+<li>JooFlux : projet de recherche pour des aspects dynamiques</li>
+
+          </ul>
+
           </div>
           
-          <h3>CRaSH</h3>
-          
-          <p>CRaSH est un shell open source étendant la machine virtuelle java avec puissance et facilité. Un utilisateur peut se connecter au shell par les protocoles SSH ou Telnet.</p>
-          <p>Les commandes de CRaSH sont écrites dans le language Groovy et peuvent être développées en temps réel, permettant d'étendre le shell facilement et très rapidement. CRaSH est fourni avec un ensemble de commandes de bases tels que la gestion de thread, la gestion de log our l'accès à la base de données.</p>
-          
-          <h3>Ceylon</h3>
-          
-          <p>Ceylon est un nouveau langage de programmation pour la machine virtuelle Java. Nous sommes fans de Java et de son &eacute;cosysteme, cependant nous pensons que le langage Java et ses libraires con&ccedil;us il y a 15 ans sont d&eacute;suets face aux challenges actuels.</p>
-  
-            <p>Ceylon a &eacute;t&eacute; con&ccedil;u avec plusieurs objectifs
-            <ul>
-              <li>Facile &agrave; apprendre pour les d&eacute;veloppeurs Java et C#</li>
-              <li>Am&eacute;liorer le typage fort de Java</li>
-              <li>Fournir une syntaxe d&eacute;clarative pour exprimer des concepts hierarchiques (interface utilisateurs, configuration systeme, etc...)</li>
-              <li>Promouvoir l'approche fonctionelle par des objects immuables et des fonction d'ordre sup&eacute;rieur</li>
-              <li>Support de la m&eacute;ta programmation</li>
-              <li>Modulaire</li>
-            </ul>
-            
-            Cette introduction &agrave; Ceylon vous montrera les fonctionnalit&eacute;s de Ceylon ainsi que les derniers progr&egrave;s faits sur le compilateur,
-            l'IDE et la communaut&eacute; autour de Ceylon.
-          </p>
-
-
-          </p>
-
           <h2>A propos de la soir&eacute;e</h2>
-          <p>Inscription: sur <a href="http://jugevents.org/jugevents/event/45076">JUG Events.</a></p>
-          <p>La session du Mars JUG se tiendra &agrave; l'&eacute;cole Supinfo &agrave; partir de 19H30 le jeudi 24 mars 2012.</p>
+          <p>Inscription: sur <a href="http://www.eventbrite.fr/event/3694177384">Event Brite.</a></p>
+          <p>La session du Mars JUG se tiendra &agrave; l'&eacute;cole Supinfo &agrave; partir de 19H30 le mardi 19 juin 2012.</p>
 
           <h1>Pr&eacute;c&eacute;dentes interventions</h1>
           <ul>
+            <li>Soir&eacute;e Retour de Devoxx avec Ceylon Java le 24 mai 2012 par <a href="http://stephane.epardaud.fr/">Stéphane Epardaud</a></li>
             <li>Soir&eacute;e Performance Java le 22 mars 2012 par <a href="http://ludopoitou.wordpress.com/">Ludovic Poitou</a></li>
             <li>Soir&eacute;e Spring 3.1 le 23 février 2012 par <a href="http://www.hikage.be/">Gildas Cuisinier</a></li>
             <li>Soir&eacute;e EclipseLink le 19 janvier 2012 par <a href="http://onpersistence.blogspot.fr/">Shaun Smith</a>: <a href="download/Shaun Smith-The Evolution of Java Persistence.pdf">slides</a></li>
