@@ -11,58 +11,6 @@
     <link rel="stylesheet" href="css/site.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <!-- Doc here : http://www.asual.com/jquery/address/docs/ -->
-    <script src="js/jquery.address-1.4.min.js"></script>
-
-    <script>
-      $(document).ready(function() {
-      
-        hideTab = function(tab) {
-          tab.removeClass("active");
-          tab.children().each(function(){
-            var id = $(this).attr("href");
-            $(id).hide();
-          })
-        }
-      
-        showTab = function(tab) {
-          tab.addClass("active");
-          tab.children().each(function(){
-            var id = $(this).attr("href");
-            $(id).show();
-          })
-        }
-        
-        // Init tabs
-        $("#tabs > li").each(function(index){
-          hideTab($(this));
-        });
-        
-        // Set the content of the next reunion
-        var truncated = $("#intervention").text().substring(0, 256);
-        $("#cible-intervention").html(truncated);
-
-        // Set the next reunion date        
-        $("#cible-titre").html($("#titre").html());
-
-        // Set the next reunion date        
-        $("#cible-date").html($("#date").html());
-
-        // The page navigation
-        $.address.change(function(event){
-          var hash = "#" + event.value.substring(1);
-          if (hash == "#")
-            hash = "#home";
-          var selector = "#tabs > li:has(a[href=" + hash + "])";
-          hideTab($("li.active"));
-          $(selector).each(function() {
-            showTab($(this));
-          });
-        });
-      });
-    </script>
-    
 </head>
 <body>
 
@@ -198,6 +146,58 @@
     </div>
 
   </div>
+
+  <!-- Scripts -->
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <!-- Doc here : http://www.asual.com/jquery/address/docs/ -->
+  <script src="js/jquery.address-1.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    
+      hideTab = function(tab) {
+        tab.removeClass("active");
+        tab.children().each(function(){
+          var id = $(this).attr("href");
+          $(id).hide();
+        })
+      }
+    
+      showTab = function(tab) {
+        tab.addClass("active");
+        tab.children().each(function(){
+          var id = $(this).attr("href");
+          $(id).show();
+        })
+      }
+      
+      // Init tabs
+      $("#tabs > li").each(function(index){
+        hideTab($(this));
+      });
+      
+      // Set the content of the next reunion
+      var truncated = $("#intervention").text().substring(0, 256);
+      $("#cible-intervention").html(truncated);
+
+      // Set the next reunion date        
+      $("#cible-titre").html($("#titre").html());
+
+      // Set the next reunion date        
+      $("#cible-date").html($("#date").html());
+
+      // The page navigation
+      $.address.change(function(event){
+        var hash = "#" + event.value.substring(1);
+        if (hash == "#")
+          hash = "#home";
+        var selector = "#tabs > li:has(a[href=" + hash + "])";
+        hideTab($("li.active"));
+        $(selector).each(function() {
+          showTab($(this));
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
