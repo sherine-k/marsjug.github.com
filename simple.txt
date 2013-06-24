@@ -1,1 +1,0 @@
-[3;1mCeci est un texte en gras.[0m
