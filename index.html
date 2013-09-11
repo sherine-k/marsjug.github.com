@@ -71,45 +71,73 @@
 
           <div class="span9">
         
-            <h2 id="date">Jeudi 4 juillet 2013</h2>
-            <h2 id="titre">Soirée Elastic Search avec David Pilato</h2>
+            <h2 id="date">Mardi 24 septembre 2013</h2>
+            <h2 id="titre">Soirée Arquillian et Modularité avec Alexis Hassler</h2>
             
-            <p id="intervention">Vous utilisez encore des requêtes SQL pour faire des recherches ? Vos utilisateurs vous reprochent de ne pas pouvoir chercher sur toutes les rubriques ? Votre temps de réponse moyen est supérieur à la demi-seconde avec seulement quelques millions de documents ? Il vous faut 3 jours pour produire des statistiques sur vos données ? Vous rêvez d’offrir une recherche "à la google" sur les données de votre SI ?</p>
+            <p id="intervention">Lors de la soirée, Alexis présentera le framework de
+            test Arquillian dans une première partie et la modularité avec Java en seconde partie.</p>
 
-            <p>Ne cherchez plus ! Cette conférence est faite pour vous.</p>
+            <h3>Une nouvelle vision des tests avec Arquillian</h3>
 
-            <p>David présentera au cours de la soirée pourquoi et comment il est passé de la recherche SQL à Elasticsearch en détaillant les apports de ce moteur par rapport à une solution pure Lucene :</p>
+			<p>La réalisation de tests unitaires est fondamentale pour développer des
+			logiciels de qualité. Cependant, tout miser sur eux est illusoire car
+			il faudra à un moment ou un autre vérifier que les composants
+			interagissent convenablement et que leur intégration dans
+			l'environnement cible fonctionne comme prévu. De plus, si
+			l'application fournit une interface graphique, il faut vérifier si les
+			interactions avec celle-ci sont correctes.</p>
 
-            <ul>
-              <li>Pourquoi Elasticsearch ?</li>
-              <li>L'indexation</li>
-              <li>La recherche</li>
-              <li>La collecte de données (rivers)</li>
-              <li>Les facettes et le principe de navigation par facettes</li>
-              <li>La scalabilité horizontale</li>
-              <li>L'analyse et le mapping</li>
-              <li>La percolation</li>
-              <li>La communauté</li>
-            </ul>
+			<p><a href="http://arquillian.org">Arquillian</a> est une plateforme qui est en train de révolutionner la
+			façon de développer les tests d'intégration et fonctionnels dans le
+			monde Java. Et malgré des défauts de jeunesse, Arquillian permet de
+			faire des tests automatisés de composants et d'applications Java,
+			depuis la persistance jusqu'à l'interface graphique, en couvrant un
+			périmètre qui dépasse largement son cadre initial qui était Java EE.</p>
 
-            <h3>A propos de David</h3>
+			<p>Lors de cette session, vous verrez comment Arquillian est capable de tester :</p>
+			<ul>
+				<li>l'intégration de composants Java EE, sur différents serveurs d'applications</li>
+				<li>le code de persistance avec l'extension APE</li>
+				<li>les interfaces Web, en facilitant l'utilisation de Selenium</li>
+			</ul>
 
-            <p>David Pilato est <i>technical advocate</i> chez Elasticsearch.com, après avoir passé les deux dernières années à promouvoir le projet open-source Elasticsearch, dont il anime la communauté française. Fidèle des JUG, il a donné une conférence sur le sujet lors de la première édition de Devoxx France en avril 2012 et sillonne désormais les routes de France pour partager sa passion.</p>
+			<h3>Le classpath n'est pas mort, mais presque</h3>
 
-            <p>Il a implémenté un certain nombre de plugins pour l'écosystème Elasticsearch (Rivers RSS, FileSystem et DropBox, Factories Spring).</p>
+			<p>En 2009, la mort du classpath a été annoncée. Les classloaders à plat
+			ou hiérarchiques devaient être remplacés par des systèmes modulaires
+			et tous nos problèmes de dépendances devaient se résoudre d'eux-même.
+			Quatre ans plus tard, le classpath vit toujours et pour quelques
+			années encore.</p>
 
-            <p>Il a également implémenté Elasticsearch pour plusieurs projets, dont une importante administration française. Il est le co-auteur du projet open-source <a href="http://www.scrutmydocs.org/">Scrutmydocs.org</a> basé sur Elasticsearch qui permet de disposer d'un moteur de recherche <i>à la google</i> des documents de vos disques durs.</p>
+			<p>Dans la première partie de cette session, nous reviendrons
+			sur le fonctionnement des classloaders du JDK et les problèmes
+			infernaux posés par le classpath. Nous verrons aussi comment les
+			serveurs d'applications, comme Tomcat, gèrent leur classloaders de
+			façon hiérarchique, afin d'isoler les applications entre elles.</p>
 
-            <p><a href="https://twitter.com/dadoonet">@dadoonet</a> et <a href="https://twitter.com/ElasticsearchFR">@ElasticsearchFR</a> sur Twitter, <a href="https://github.com/dadoonet">dadoonet</a> sur GitHub.</p>
+			<p>Dans la deuxième partie, nous parlerons de modularité et de son impact
+			sur la gestion des dépendances, à l'exécution des applications. Des
+			solutions existent déjà, comme OSGi et Jigsaw, d'autres émergent,
+			comme JBoss Modules. Nous vous montrerons comment ce dernier fonctionne,
+			dans JBoss AS 7, en autonome, ou même dans Tomcat.</p>
+
+            <h3>A propos d'Alexis</h3>
+
+            <p>Alexis vient du Beaujolais, mais contrairement à la plupart de ses
+			voisins il n'est pas vigneron. C'est un développeur indépendant,
+			consultant et formateur (<a href="http://www.sewatech.fr/alexis-hassler.html">http://www.sewatech.fr/alexis-hassler.html</a>).
+			Alexis est aussi JUG leader à <a href="lyonjug.org">Lyon</a> et donne un coup de
+			main à l'organisation de la conférence annuelle <a href="mix-it.org">Mix-IT</a></p>
 
             <h3>A propos de l'évènement</h3>
 
-            <p>Inscription: sur <a href="http://www.eventbrite.fr/event/7210361385">Event Brite.</a></p>
+            <p>Inscription: sur <a href="https://www.eventbrite.fr/event/8286123017">Event Brite.</a></p>
 
-            <p>La soirée se déroulera <span class="label label-info">le jeudi 4 juillet</span> à partir de 19h30.</p>
+            <p>La soirée se déroulera <span class="label label-info">le mardi 24 septembre</span> à partir de 19h30.</p>
 
             <h2>Pr&eacute;c&eacute;dentes interventions</h2>
             <ul class="unstyled">
+              <li>Soirée <i>Elastic Search</i> le 4 juillet 2013 par <a href="http://glaforge.appspot.com">David Pilato</a></li>
               <li>Soirée <i>Groovy</i> le 18 juin 2013 par <a href="http://glaforge.appspot.com">Guillaume Laforge</a></li>
               <li><i>Hackergarten</i> le 5 juin 2013</li>
               <li>Soirée <i>Soirée Gatling : Faites tomber la foudre !</i> le 16 mai 2013 par <a href="https://twitter.com/slandelle">Stéphane Landelle</a> et <a href="https://github.com/pdalpra‎">Pierre Dal-pra</a></li>
