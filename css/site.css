@@ -12,3 +12,11 @@ body {
 .center {
   text-align: center;
 }
+
+#reunions .reunions-subsection-title{
+    margin-top: 20px;
+}
+
+#reunions .reunions-section-title{
+    margin-top: 30px;
+}
