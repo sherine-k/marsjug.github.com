@@ -54,7 +54,7 @@
               <i class="icon-twitter"></i> <strong>Twitter:</strong> <a href="http://twitter.com/#!/marsjug">@marsjug</a><br />
               <i class="icon-star"></i> <strong>Meetup:</strong> <a href="http://www.meetup.com/Marseille-Java-User-Group-Meetup/">marsjug</a><br />
               <i class="icon-envelope"></i> <strong>Mail:</strong> <a href="contact@marsjug.org">contact@marsjug.org</a><br />
-              <i class="icon-calendar"></i> <strong>Ev&eacute;nements:</strong> <a href="http://www.eventbrite.fr/org/26042866916">Event Brite</a><br />
+              <i class="icon-calendar"></i> <strong>Ev&eacute;nements:</strong> <a href="http://www.eventbrite.fr/org/27753243699">Event Brite</a><br />
               </address>
             </div>
 
@@ -69,7 +69,7 @@
                 <h3>Prochain évènement</h3>
               <div class="row">
                 <div class="span2" style="float: none !important;margin: 0 auto;">
-                    <div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.fr/countdown-widget?eid=26042866916" frameborder="0" height="179" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;" ></div>
+                    <div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.fr/countdown-widget?eid=27753243699" frameborder="0" height="179" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;" ></div>
                 </div>jeu
             </div>
          </div>
@@ -87,41 +87,53 @@
 
           <div class="span9">
 
-            <h2 id="date">Mardi 28 juin 2016</h2>
-            <h2 id="titre" class="reunions-section-title">Gagnez au tirage avec Kanban!</h2>
+            <h2 id="date">Jeudi 13 octobre 2016</h2>
+            <h2 id="titre" class="reunions-section-title">Les Furets sont de retour!</h2>
 
-            <p id="intervention">Kanban, mais oui, vous savez, c’est le tableau de Post-it © au fond de la salle qui vous rappelle que vous êtes agiles!</p>
-            <p>Et si je vous (ra)contais le minimum vital des principes qui se cachent derrière ?</p>
-            <p>Oui, il y a bien une histoire visuelle derrière tout ça, mais pas uniquement. Kanban est aussi une conduite du changement basée sur l’amélioration continue de votre processus existant.</p>
-            <p>Durant cette session, je vous dévoilerai</p>
-            <ul>
-                <li>Quelques clefs du management visuel: Rendre visible l’avancement, l’objectif, les tendances !</li>
-                <li>Gérer le Flux de Valeur : Comprendre ce qu’est un Flux / Flux de valeur, Flux tiré/poussé / Limiter le travail en cours: WIP</li>
-                <li>Régler son processus: Expliciter les règles et caractéristiques / Trouver la bonne cadence</li>
-                <li>Et pour aller plus loin: Théorie des contraintes, Files d’attentes,  Kanban vs Scrum : complémentarité ou nouvelle option ?</li>
-            </ul>
-            
-            <p>Suivi du traditionnel BBQ de fin d'année du MarsJUG</p>
-            
-            <h3 class="reunions-subsection-title">A propos de l'intervenant</h3>
+            <p id="intervention">Deux sessions au programme : Continuous merge chez <a href="http://lesfurets.com">LesFurets.com</a> et DomainModel().stream()</p>
 
-            <h4><a href="https://twitter.com/glours">Guillaume Lours</a></h4>
+            <h3>Continuous merge chez LesFurets.com</h3>
+            <p>Nous allons faire un tour d'horizon de notre process de mise en production chez <a href="http://lesfurets.com">LesFurets.com</a> pour comprendre comment nous arrivons à
+              faire du continuous delivery, avec des mises en production tous les jours. Nous allons surtout parler de notre
+              outil "git octopus", qui nous permet de faire du continuous merge, et de détecter en amont les problèmes de
+              merge entre nos branches.</p>
+
+            <h3>DomainModel().stream()</h3>
+            <p>Pour faire du traitement de données, les listes, tableaux et maps sont les structures de données les plus faciles à manipuler.
+              Malheureusement la plupart des applications sont conçues autour d'un modèle métier.</p>
+            <p>Chez <a href="http://lesfurets.com">LesFurets.com</a> nous avons résolu ce problème en développant un KVM (Key Value Mapping). Ce framework est utilisé
+              au cœur de l'application et cohabite avec le modèle métier. Grâce au mapping bidirectionnel de notre modèle métier
+              vers un modèle clé-valeur, les manipulations de données deviennent extrêmement simples à réaliser. La mise en
+              place de ce nouveau paradigme a nécessité un important refactoring de l'application et a permis de l'ouvrir à
+              de nombreux outils actuels (Stream Java 8, RxJava, Spark, Cassandra)</p>
+
+            <h3 class="reunions-subsection-title">A propos des intervenants</h3>
+
+            <h4>Gilles Di Guglielmo</h4>
             
-            <p>Newbie du BigData chez <a href="https://www.saagie.com/">Saagie</a> où je participe au développement de la plateforme</p>
-            <p>Co-fondateur et ancien organisateur des conférences Codeurs En Seine et Lean Kanban France</p>
-            
+            <p>Gilles travaille depuis 15 ans pour différents éditeurs de logiciels (ILOG, PrimaSolution, Courtanet) sur des
+              sujets très variés: librairie graphique 2D, moteur de règles, plate-forme de services, code génération
+              de modèle métier. Actuellement, il est architecte pour le site <a href="http://lesfurets.com/">LesFurets.com</a>, et aime prendre l'air de
+              temps en temps à San Francisco ou à Anvers. Il a présenté différentes sessions à SoftShake, Devoxx,
+              CodeGeneration, JavaOne et plusieurs Java User Group en France.</p>
+
+            <h3>Alexandre DuBreuil</h3>
+            <p>Architecte canadien (garanti sans accent) de l'équipe data chez <a href="http://lesfurets.com">LesFurets.com</a>, je m'intéresse depuis
+              ongtemps aux techniques de gestion de code, de construction d'application et de delivery.</p>
+
             <h3 class="reunions-subsection-title">A propos de l'évènement</h3>
 
-            <p>La soirée se déroulera <span class="label label-info">le mardi 28 juin </span> à partir de 19h30 sur le <a href="https://www.google.com/maps/place/SUPINFO/@43.3454417,5.4313163,17z/data=!3m1!4b1!4m2!3m1!1s0x0:18627624727">campus de SUPINFO</a>.</p>
+            <p>La soirée se déroulera <span class="label label-info">le jeudi 13 octobre </span> à partir de 19h30 sur à <a href="https://www.google.fr/maps/place/Marseille+Innovation/@43.3438059,5.433214,17z/data=!3m1!4b1!4m5!3m4!1s0x12c9bfcd56adcd43:0xfbdd608d4598baa!8m2!3d43.343802!4d5.435408">l'Hôtel Technologique</a>.</p>
 
-            <p>Inscription sur <a href="https://eventbrite.fr/event/26042866916/">Event Brite</a>:</p>
+            <p>Inscription sur <a href="https://eventbrite.fr/event/27753243699/">Event Brite</a>:</p>
 
-            <div style="width:100%; text-align:left;" ><iframe src="http://www.eventbrite.com/tickets-external?eid=26042866916&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
+            <div style="width:100%; text-align:left;" ><iframe src="http://www.eventbrite.com/tickets-external?eid=27753243699&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
 
             <h2 class="reunions-section-title">Pr&eacute;c&eacute;dentes interventions</h2>
 
             <h4 class="reunions-subsection-title">Saison 2015/2016</h4>
             <ul>
+              <li><i>Gagnez au tirage avec Kanban!</i> 28 juin 2016 par <a href="https://twitter.com/glours">Guillaume Lours</a></li>
               <li><i>Le retour du Mega Jenkins 2.0</i> 2 juin 2016 par <a href="https://twitter.com/aheritier">Arnaud Héritier</a></li>
               <li><i>Kotlin 1.0 : pragmatic mais fun</i> 7 avril 2016 par <a href="http://twitter.com/gz_k">Gaetan Zoritchak</a></li>
               <li><i>RxJava pratique: les recettes de Hawkular Metrics</i> 25 février 2016 par <a href="https://twitter.com/tsegismont">Thomas Segismont</a></li>
@@ -181,11 +193,9 @@
 
           <div class="span3">
             <address>
-              <strong>Technop&ocirc;le Marseille Provence</strong><br />
-              Ch&acirc;teau Gombert<br />
-              Les Baronnies, B&acirc;timent B, RDC<br />
-              15 rue Marc Donadille<br />
-              13013 MARSEILLE<br />
+              <strong>Hôtel Technologique</strong><br />
+              45 Rue Frédéric Joliot Curie<br />
+              13382 MARSEILLE<br />
             </address>
           </div>
 
