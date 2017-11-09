@@ -54,7 +54,7 @@
               <i class="icon-twitter"></i> <strong>Twitter:</strong> <a href="http://twitter.com/#!/marsjug">@marsjug</a><br />
               <i class="icon-star"></i> <strong>Meetup:</strong> <a href="http://www.meetup.com/Marseille-Java-User-Group-Meetup/">marsjug</a><br />
               <i class="icon-envelope"></i> <strong>Mail:</strong> <a href="contact@marsjug.org">contact@marsjug.org</a><br />
-              <i class="icon-calendar"></i> <strong>Ev&eacute;nements:</strong> <a href="http://www.eventbrite.fr/org/38220546684">Event Brite</a><br />
+              <i class="icon-calendar"></i> <strong>Ev&eacute;nements:</strong> <a href="http://www.eventbrite.fr/org/39725608364">Event Brite</a><br />
               </address>
             </div>
 
@@ -69,7 +69,7 @@
                 <h3>Prochain évènement</h3>
               <div class="row">
                 <div class="span2" style="float: none !important;margin: 0 auto;">
-                    <div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.fr/countdown-widget?eid=38220546684" frameborder="0" height="179" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true">
+                    <div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.fr/countdown-widget?eid=39725608364" frameborder="0" height="179" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true">
                     </iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;" ></div>
                 </div>
             </div>
@@ -88,52 +88,59 @@
 
           <div class="span9">
 
-            <h2 id="date">Mercredi 11 octobre 2017</h2>
-            <h2 id="titre" class="reunions-section-title">Soirée fast cars, big data!</h2>
+            <h2 id="date">Mardi 21 novembre 2017</h2>
+            <h2 id="titre" class="reunions-section-title">Des Benchmarks qui déchirent, avec JMH</h2>
 
-            <p id="intervention">Les voitures, et tout particulièrement les voitures de courses, génèrent énormément de données. Durant cette présentation, basée sur des démonstrations, vous verrez comment :</p>
+            <p id="intervention">Dans cette session, nous vous présenterons JMH, un sous-projet de l'OpenJDK pour la
+              construction, l'exécution et l'analyse de nano / micro / milli / macro benchmarks.</p>
             
-            <ul>
-                <li>Capturer et traiter les données en temps réel avec l’API Kafka et Spark</li>
-                <li>Analyser ces données avec Apache Spark et Drill</li>
-            </ul>
+            <p>Il devrait vous aider à trouver des hot spots pour optimiser les performances et, ce qui peut être encore
+              plus important, il vous montrera des parties que vous n'avez pas vraiment besoin d'optimiser. Cela 
+              rendra non seulement vos benchmarks plus précis, mais aussi beaucoup plus facile à écrire.</p>
             
-            <p>Le but de cette présentation, basée sur des démonstrations est de montrer qu’il est possible aujourd’hui, sur une seule plateforme big data:</p>
-            
-            <ul>
-                <li>De capturer les données en temps reel sous forme de flux avec Kafka</li>
-                <li>Les traiter avec Spark Streaming</li>
-                <li>Les stocker sous differentes formes en fonction des besoins fichiers (JSON, Parquet), mais aussi base nosql (HBase, MapRDB JSON, ...)</li>
-                <li>Les analyser en mode batch par exemple pour faire de la maintenance predictive via du machine learning avec Spark ML, ou plus simplement des requetes SQL avec Apache Drill.</li>
-            </ul>
-            
-            <p>Le projet est disponible en <a href="https://github.com/mapr-demos/racing-time-series">open source</a> et s’appuie sur:</p>
-            
-            <ul>
-                <li>Des Producer/Consumer Kafka</li>
-                <li>Spark et Spark Streaming pour le traitement de l’information en temps reel et batch.</li>
-                <li>Une Web Application pour la visualisation en temps reel avec Kafka Consumer+Web Socket</li>
-                <li>Un simulateur de course pour la generation des données TORCS (The Open Source Racing Car Simulator)</li>
-            </ul>
+            <p>Cerise sur le gâteau, nous vous montrerons aussi comment JMH peut être utilisé avec JFR (Java
+                Flight Recorder) pour générer des flamegraphs qui vous permettront d'analyser non seulement
+                la consommation CPU, mais également les patterns d'allocation de mémoire, les exceptions lancées
+                par vos applications et locks les plus disputés.</p>
+
+            <p>Nous détaillerons pourquoi le benchmarking est difficile, discuterons le fonctionnement de la JVM
+              pour vous aborder le fonctionnement du compilateur JIT et comment le code est exécuté nativement
+              par la JVM. Nous présenterons ensuite JMH et expliquerons comment il peut être utilisé pour chauffer la JVM
+              , éviter les optimisations du compilateur sur le code du benchmark, et s'assurer de mesures correctes.
+              Nous expliquerons
+              comment les benchmarks multithreadés peuvent être facile à écrire et comment vous pouvez analyser
+              tout cela avec des flamegraphs.</p>
+
+            <p>Enfin, nous parlerons de la manière dont cela peut faire partie de votre processus d'intégration
+              continue et discuterons de notre expérience en utilisant JMH pour évaluer les pièces critiques
+              des systèmes distribués Amadeus.</p>
+
+            <p>JMH est pour benchmarking ce que JUnit est pour les tests unitaires. Le talk sera rempli de
+              live coding et d'exemples qui démontreront et à comprendre les concepts.</p>
 
             <h3 class="reunions-subsection-title">A propos des intervenants</h3>
 
-            <h4><strong>Tugdual Grall</strong></h4>
-            <p>Tugdual Grall, est Chief Technical Evangelist EMEA chez MapR. Il travaille avec les clients et communautés de développeurs européennes, pour faciliter l'adoption de MapR, Hadoop et NoSQL.</p>
+            <h4><strong>Leonardo Gomes</strong></h4>
+            <p>Devenu performance architecte, après plusieurs années à travailler sur le middleware. Leonardo rejoint
+              Amadeus en 2008. Amadeus fournit des technologies à l'industrie du voyage desservant plus de 100 compagnies
+              aériennes, ainsi que des agences de voyages, des hôtels, des sociétés de location de voitures et des
+              compagnies de ferry dans le monde entier. Nos systèmes distribués échangent près d'un demi-million
+              de requêtes par seconde.</p>
             
-            <p>Avant de travailler chez MapR, "Tug", était Technical Evangelist chez MongoDB et Couchbase. Tug a également travaillé comme CTO chez eXo Platform, et comme Product Manager et Développeur sur la platform Java/JavaEE d'Oracle.</p>
-            
-            <p>Tugdual est également co-fondateur du Nantes JUG (Java Users Group) qui réunit tous les mois depuis 2008 les développeurs et architectes de la région nantaise.</p>
-
             <h3 class="reunions-subsection-title">A propos de l'évènement</h3>
             
-            <p>La soirée se déroulera <span class="label label-info">le mercredi 11 octobre </span> à partir de 19h30 sur le <a href="https://www.google.com/maps/place/SUPINFO/@43.3454417,5.4313163,17z/data=!3m1!4b1!4m2!3m1!1s0x0:18627624727">campus de SUPINFO</a>.</p>
+            <p>La soirée se déroulera <span class="label label-info">le mardi 21 novembre </span> à partir de 19h30 sur le <a href="https://www.google.com/maps/place/SUPINFO/@43.3454417,5.4313163,17z/data=!3m1!4b1!4m2!3m1!1s0x0:18627624727">campus de SUPINFO</a>.</p>
 
-            <p>Inscription sur <a href="https://eventbrite.fr/event/38220546684/">Event Brite</a>:</p>
+            <p>Inscription sur <a href="https://eventbrite.fr/event/39725608364/">Event Brite</a>:</p>
 
-            <div style="width:100%; text-align:left;" ><iframe src="http://www.eventbrite.com/tickets-external?eid=38220546684&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
+            <div style="width:100%; text-align:left;" ><iframe src="http://www.eventbrite.com/tickets-external?eid=39725608364&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
 
             <h2 class="reunions-section-title">Pr&eacute;c&eacute;dentes interventions</h2>
+
+            <h4 class="reunions-subsection-title">Saison 2017/2018</h4>
+            <ul>
+              <li><i>Soirée fast cars, big data! par Tugdual Grall le 11 octobre 2017</li>
+            </ul>
 
             <h4 class="reunions-subsection-title">Saison 2016/2017</h4>
             <ul>
