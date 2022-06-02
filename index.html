@@ -107,48 +107,78 @@
 
         <div class="span9">
 
-          <h2 id="date">Jeudi 19 mai 2022</h2>
-          <h2 id="titre" class="reunions-section-title">Quoi de neuf Java?</h2>
+          <h2 id="date">Jeudi 23 Juin 2022</h2>
+          <h2 id="titre" class="reunions-section-title">Accès non bloquant en base, quesaco? </h2>
 
-          <p id="intervention">En travaux depuis plusieurs années, le projet Loom n'a jamais été aussi proche d'être intégré 
-            dans la plateforme Java. Des préversions sont disponibles, qui nous permettent déjà d'imaginer les patterns de code
-            et les performances apportées par ce projet. Une nouvelle notion de Thread arrive pour la plateforme Java, ce qui 
-            n'est pas une mince affaire. Nos vieux Threads (25 ans) laisseront la place à de nouveaux Threads, plus légers et 
-            plus nombreux. Ces nouveaux threads, virtuels, amènent de nouvelles notions, objets de cette présentation, dont la 
-            programmation concurrente structurée. Nous parlerons de la programmation réactive et asynchrone, d'acteurs, 
-            de ScopeLocal, nouvelle version de ThreadLocal, de StructuredExecutor et verrons les modèles de synchronization 
-            apportés par Loom. 
+          <p id="intervention"><b>SQL réactif : pourquoi c'est important ?</b><br>
+          La programmation asynchrone et non-bloquante nous permet de tirer le meilleur parti du matériel dont nous disposons.
+          Grâce à elle, nous pouvons augmenter la densité de déploiement et, de ce fait, diminuer les coûts et le gaspillage 
+          des ressources.<br>
+          Les bénéfices sont marquants dans les architectures microservices, lorsque nous combinons différentes
+          sources de données en transit sur le réseau. Dans leur boîte à outils, les développeurs Java disposent de clients HTTP 
+          réactifs, mais est-ce utile sans équivalent dans le monde SQL ?<br>
+          Nous allons explorer quelques solutions pour l'accès non-bloquant à une base de données relationnelle. Nous commencerons
+          par JDBC comme contre-exemple, puis nous verrons comment utiliser Vert.x Reactive SQL Client. Enfin nous ferons 
+          connaissance avec l'ORM Hibernate Reactive. En tenant compte de leurs avantages et de leurs limitations, vous serez 
+          capables de faire vos choix entre compatibilité et efficacité, flexibilité ou productivité.
           </p>
-          
-          <p>Le pattern matching, développé dans le projet Amber a commencé à livrer ses premiers éléments : un nouveau switch
-            et un nouvel instanceof construit sur le pattern de type. Nous en soulèverons le capot et examinerons le fonctionnement
-            du pattern matching en détail. Au programme : du code, des patterns et des démos.</p>
+          <p><b>ORM, 20 ans plus tard...</b><br>
+          Hibernate est une solution ORM (Object-Relational Mapping) incontournable du marché, encore très populaire 20 ans après sa première 
+          apparition au sein de la communauté Java.<br>
+          L'équipe Hibernate a récemment sondé ses utilisateurs sur les défauts de la solution, et les remédiations possibles. Grâce aux réponses
+          des utilistaurs, les développements Hibernate 6 ont été lancés. Cette version apportera un changement radical par rapport aux versions 
+          précédentes. <br>
+          En même temps, l'équipe Hibernate a crée Hiberante Reactive, le premier ORM non bloquant, en réponse aux besoins de la communauté Quarkus. <br>
+          Gavin King vous propose aujourd'hui de vous présenter Hibernate 6 et Hibernate Reactive, et de vous faire un retour d'expérience
+          sur son retour dans le monde de la persistence de données après une longue absence
+          <!--Hibernate is the preeminent object/relational mapping solution, and is still immensely popular two decades after it was first
+            introduced to the Java community.
+            The Hibernate team recently had an opportunity to ask what Hibernate got wrong, and what could be done about it. Answers to those
+            questions were realized in Hibernate 6, which marks a significant break with the past.
+            Simultaneously, the needs of Quarkus pushed the team to create Hibernate Reactive, the first non-blocking ORM.
+            In this session, Gavin King will talk about Hibernate 6 and Hibernate Reactive, and of his experience returning to the world of data
+             access after a long abscence.-->             
+          </p>
 
           <h3 class="reunions-subsection-title">A propos des intervenants</h3>
 
-          <h4><strong>José Paumard</strong></h4>
-          <p>José est membre du Java Platform Group chez Oracle en tant que Java Developer Advocate. Il a été maître de conférences
-            à l'université Paris 13 pendant 25 ans et est intervenu auprès de sociétés en formation et expertise. Il anime le blog 
-            technique "Java le soir" et contribue à divers projets Open source. Impliqué dans la communauté Java, il est trésorier 
-            de l'association BJPC, organisatrice des soirées du Paris JUG et cofondateur de Devoxx France qu'il a coorganisé les 3 
-            premières années. Java Champion, plusieurs fois Java Rockstar speaker régulier pour Devoxx (FR, BE, UK), JavaOne, de 
-            nombreux JUG francophones, il est également auteur pour Java Magazine.</p>
-          
-          <h4><strong>Rémi Forax</strong></h4>
-          <p>Java Plombier, Maitre de Conférence, Virtual Machine Whisperer, martirise ses pauvres étudiants, complexifie Java en
-            étant experts pour les JSR 292, 335 et 376, développe des librariries et langage dynamiques open source utilisés ou pas.
-
+          <h4><strong>Gavin King</strong></h4>
+          <p>Gavin King est Distinguished Engineer chez RedHat. C'est le créateur d'Hibernate, une des solutions de persistence 
+            objets relationels Java les plus connus, ainsi que du langage de programmation Ceylon.<br>
+            Il a contribué au design de JPA et d'EJB 3.0. Il est auteur de la specification CDI. <br>
+            Il est également co-auteut de <i>Java Persistence with Hibernate</i><br>
+            Actuellement, Gavin travaille sur Hibernate 6 et Hibernate Reactive.<br>
+            <!--He’s the creator of Hibernate, a popular object/relational persistence solution for Java, and of the Ceylon programming language. 
+              He contributed to the design of JPA and EJB 3.0, and was the spec lead and author of the CDI specification.
+               He coauthored Java Persistence with Hibernate. Gavin has recently worked on Hibernate 6 and Hibernate Reactive.</p>
+            -->
+          <h4><strong>Thomas Segismont</strong></h4>
+          <p>Thomas est Principal Software Engineer chez RedHat. Avec 15 ans d'expérience en dév, il a travaillé sur toutes sortes de projets
+             dans divers secteurs: bancaire, finance, tourisme, services, hôtellerie. <br>
+             En tant que contributeur à VertX, il s'est spécialisé dans les développements autour des clients SQL reactive pour plusieurs
+             bases de données relationnelles, préparant le terrain pour le projet Hibernate Reactive.<br>
+             Il est également contributeur Quarkus, la stack Java supersonique, subatomique pour le cloud.
+            <!--With more than 15 years of software development experience, he has worked on projects of all sizes in various sectors: retail banking,
+               utilities, finance, tourism, and hosting. As a Vert.x core committer, he is focused on developing reactive SQL clients for several relational
+                databases, making them a solid foundation for the Hibernate Reactive project. He is also a contributor to Quarkus, the supersonic subatomic 
+                Java stack, tailored for the cloud.-->
           </p>
           <h3 class="reunions-subsection-title">A propos de l'évènement</h3>
 
-          <p>La soirée se déroulera <span class="label label-info">le jeudi 19 mai</span> à partir de 19h00 dans les locaux de 
+          <p>La soirée se déroulera <span class="label label-info">le jeudi 23 Juin</span> à partir de 19h00 dans les locaux de 
             <a href="https://www.google.com/maps/search/?api=1&query=43.280815%2C%205.614174">Tricentis</a> à Gemenos.</p>
+          <p>Et pourquoi pas profiter du <span class="label label-info">BBQ annuel</span> du Marseille JUG par la suite? </p>
 
           <ul>
             <li>Inscription pour la conférence sur <a href="https://www.meetup.com/Marseille-Java-User-Group-Meetup/events/285693249/">Meetup</a></li>
           </ul>
 
           <h2 class="reunions-section-title">Pr&eacute;c&eacute;dentes interventions</h2>
+
+          <h4 class="reunions-subsection-title">Saison 2022</h4>
+          <ul>
+            <li><i>Quoi de neuf Java? </i>R&eacute;mi Forax &amp; Jos&eacute;Paumard  le 19 Mai 2022</li>
+          </ul>
 
           <h4 class="reunions-subsection-title">Saison 2019/2020</h4>
           <ul>
