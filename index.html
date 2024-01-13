@@ -107,39 +107,40 @@
 
         <div class="span9">
 
-          <h2 id="date">Mercredi 29 Novembre</h2>
-          <h2 id="titre" class="reunions-section-title">Taming performance issues into the wild: a practical guide to JVM profiling</h2>
-          <p id="intervention">The session will start with a quick introduction to the theory of profiling discussing the motivations,
-            explaining the different types of profiling and visualization format while listing the tools available for this purpose.
-            This also includes some tooling for reliably emulating the load generation and validating the improvements.</p>
-          <p>We will provide a sample Quarkus-based Java webapp, using a simple but realistic technology stack, having different
-            performance issues involving excessive memory allocation, CPU consumption, slow blocking I/O, locks contention
-            and cache misses.</p>
-          <p>We will demonstrate how to use the chosen profiling tool (ie async-profiler) to discover, investigate, fix and verify
-            these issues.</p>
+          <h2 id="date">Mardi 23 Janvier</h2>
+          <h2 id="titre" class="reunions-section-title">Dimensionner des applications pour Kubernetes</h2>
+          <p id="intervention">
+            Lorsqu'on doit déployer une application sur un cluster Kubernetes, une bonne pratique est de définir des ressources "<b>requests</b>" et "<b>limits</b>" pour garantir le bon fonctionnement de celle-ci tout en garantissant la bonne santé du cluster qui l'accueille.
+            <br>
+            OK, mais quelles valeurs de "requests" et "limits" doit-on spécifier ? Pas assez de RAM et l'application sera "OOMKilled" ? Trop de CPU, mais cela bloquera les autres déploiements ?
+            <br>
+            Après un rapide rappel des concepts et tour d'horizon des différentes options pour paramétrer ces ressources, je vous présenterai deux outils simples mais efficaces pour vous aider à définir des valeurs pragmatiques : <b>Krr</b> d'une part, <b>Goldilocks</b> et l'utilisation automatique des <b>V</b>ertical <b>P</b>od <b>A</b>utoscaler d'autre part. Je vous montrerai enfin comment intégrer au mieux ces informations dans vos tableaux de bord.
+            <br>
+Pour chaque outil, une démonstration sera faite sur des applications "live", avec mes propres avis et retour d'expérience.
+          </p>
 
             <h3 class="reunions-subsection-title">A propos de l'intervenant</h3>
 
-          <h4><strong><a href="https://twitter.com/Ia3ndy">Francesco Nigro</a></strong></h4>
-          <p>I've been working for many years in the computer field. In the last 15 years I've cultivated a strong passion in
-            Java development and the under the hood details of OpenJDK, recently joined by C and (x86) ASM. Big fan of DDD
-            (Domain Driven Design) world, I've developed several Event-Sourcing high performance solutions in the medical and IoT field.</p>
-          <p>I'm an active member of various online communities on performance, Principal (Software) Performance Engineer and
-            Performance Lead for Red Hat on Quarkus, Red Hat Top Inventor (2019). I've collaborated to different projects
-            related high-performance computing both as committer and contributors eg Quarkus, Vert-x, Netty committer, JCTools
-            author, PMC of ActiveMQ Apache Artemis (Messaging Broker), HdrHistogram, JGroups-raft</p>
-          <p>Also now a Java Champion starting this month :-)</p>
+          <h4><strong><a href="https://twitter.com/rverchere">Remi Verchere</a></strong></h4>
+          <p>
+            D'abord chez les Devs sur des solutions embarquées, j'ai au fur et à mesure de mes postes basculé chez les Ops sur des solutions d'infrastructure diverses et variées.
+            <br>
+            Pendant plus de 10 ans j'ai donc bossé avec les Devs et les Ops, affichant une volonté de proposer des choix autour des solutions Open Source.
+            <br>
+Je suis maintenant consultant depuis plusieurs années, et apporte aux entreprises mon savoir-faire sur des sujets d'automatisation, observabilité et cloud native infrastructure, en tant qu'Ops au service des Devs.
+          </p>
 
-          <p>La soirée se déroulera <span class="label label-info">le mercredi 29 Novembre</span> à partir de 19h00 dans les locaux de
+          <p>La soirée se déroulera <span class="label label-info">le mardi 23 Janvier</span> à partir de 19h00 dans les locaux de
             <a href="https://www.google.com/maps/search/?api=1&query=43.280815%2C%205.614174">Tricentis</a> à Gemenos.</p>
 
             <ul>
-                <li>Inscription pour la conférence sur <a href="https://www.meetup.com/fr-FR/marseille-java-user-group-meetup/events/297395605/">Meetup</a></li>
+                <li>Inscription pour la conférence sur <a href="https://www.meetup.com/marseille-java-user-group-meetup/events/298525791/">Meetup</a></li>
             </ul>
 
           <h2 class="reunions-section-title">Pr&eacute;c&eacute;dentes interventions</h2>
           <h4 class="reunions-subsection-title">Saison 2023</h4>
           <ul>
+            <li><i>Taming performance issues into the wild: a practical guide to JVM profiling</i> <strong>Francesco Nigro</strong>, 29 Novembre 2023</li>
       <li><i>Comment créer des applications Web et des composants Full-Stack avec Quarkus Web Bundler</i> <strong>Andy Damevin</strong>, 8 Novembre 2023</li>
       <li><i>Simplifiez le déploiement de vos applications Java sur Kubernetes avec JKube</i> <strong><a href="https://twitter.com/__sunix_">Sun Tan</a></strong>, 26 Septembre 2023</li>
 		  <li><i>CI/CD : complexe mais incontournable</i> <strong><a href="https://twitter.com/thomas_boni">Thomas Boni</a></strong>, 27 Juin 2023</li>
