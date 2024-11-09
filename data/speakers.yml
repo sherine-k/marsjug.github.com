@@ -11,3 +11,44 @@
     José est Java Developer Advocate chez Oracle très actif dans la communauté: Il publie les séries vidéo "Java Coding Tips" et "JEP Café", sur Java YouTube Channel.
     Il contribue au contenu du site dev.java. Il est également membre actif du Paris JUG, et désorganise le JChateau Unconference.
     Précédemment il a enseigné 25 ans à Sorbonne Paris Nord!
+- id: sallemand
+  name: Sebastien Allemand
+  profile: https://x.com/allema_s
+  bio: | 
+    Sebastien un vrai passionné de tech!
+- id: rverchere
+  name: Rémi Verchère
+  profile: https://x.com/rverchere
+  bio: |
+    D'abord chez les Devs sur des solutions embarquées, j'ai au fur et à mesure de mes postes basculé chez les Ops sur des solutions d'infrastructure diverses et variées.
+    Pendant plus de 10 ans j'ai donc bossé avec les Devs et les Ops, affichant une volonté de proposer des choix autour des solutions Open Source.
+    Je suis maintenant consultant depuis plusieurs années, et apporte aux entreprises mon savoir-faire sur des sujets d'automatisation, observabilité et cloud native infrastructure, en tant qu'Ops au service des Devs. 
+- id: glaforge
+  name: Guillaume Laforge
+  profile: https://x.com/glaforge
+  bio: |
+    Guillaume est Developer Advocate chez Google Cloud, où il se focalise sur les architectures orientées événement, l'orchestration d'API, et l'intelligence artificielle générative.
+    Dans le monde Java, Guillaume est sans doute plus connu pour avoir co-fondé le langage de programmation Apache Groovy, et pour être un des membres fondateurs du podcast tech Les Cast Codeurs.
+- id: ykheddache
+  name: Yacine Kheddache
+  profile: https://x.com/YadaYac
+  bio: |
+    Avec plus de 26 ans d'expérience dans le secteur des logiciels open source (7 ans dans le monde des fournisseurs de services Internet, 14 ans en tant qu'entrepreneur innovant #lovestartups et 6 ans chez Red Hat). Je suis maintenant à 100% sur notre project opensource Microcks.
+    J'ai également développé une expertise dans les organisations ouvertes (intrapreneuriat), multiculturelles et suis passionné par les enjeux stratégiques et la vie des entreprises (transformation numérique et innovation disruptive).
+    Personnellement, je suis un amateur de montagne (escalade, ski...) et j'apprécie partager de bonnes bières artisanales houblonnées.
+- id: lbroudoux
+  name: Laurent Broudoux
+  profile: https://x.com/lbroudoux
+  bio: |
+    Laurent est un expert en architecture cloud-native et un passionné des problèmes d'Intégration en Entreprise. Il est le fondateur du projet Open Source Microcks.io. Il utilise ses +10 ans d'expérience en tant qu'architecte dans les services financiers où il a défini des stratégies de transformation par les API et microservices, y compris la gouvernance et le processus de livraison.
+- id: pcharriere
+  name: Philippe Charrière
+  profile: https://x.com/k33g_org
+  bio: |
+    🐳 Sr Solutions Architect @Docker
+    🦊🥑 Former Sr CSE/M @GitLab SE @GitHub
+    ☸️ @CivoCloud Ambassador
+- id: nmuller
+  name: Nicolas Muller
+  profile: https://x.com/zepouet
+  bio: un dev qui n'aime pas les ops mais aime bien Java
