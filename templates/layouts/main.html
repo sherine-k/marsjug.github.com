@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="{site.url()}" class="logo" style="background-image: url('{site.image('marsjug.png')}')"></a>
+      <ul id="tabs" class="nav" >
+        <li {#if page.data.id == 'home'}class="active"{/}><a href="{site.url()}">Home</a></li>
+        <li {#if page.data.id == 'reunions'}class="active"{/}><a href="{site.url("reunions")}">Soirées</a></li>
+        <li {#if page.data.id == 'archives'}class="active"{/}><a href="{site.url("archives")}">Archives</a></li>
+        <li {#if page.data.id == 'partenaires'}class="active"{/}><a href="{site.url("partenaires")}">Partenaires</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+  <section id="{page.data.id}">
+    <div class="row">
+      {#insert /}
+    </div>
+  </section>
+</main>
+
