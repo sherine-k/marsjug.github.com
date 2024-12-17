@@ -24,6 +24,7 @@ jobs:
         id: get_url
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TZ: Europe/Paris
         run: |
           url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url');echo "ghp-url=$url";
           path=$(echo "$url" | sed -E 's|https?://[^/]+(/.*)?|\1|')
