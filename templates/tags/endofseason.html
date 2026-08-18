@@ -1,0 +1,15 @@
+<div class="endofseason">
+  <h2 class="reunions-section-title">La saison {season} est terminée !</h2>
+  <p>
+    Un grand merci à nos visiteurs, à nos sponsors
+    {#for p in cdi:partenaires.list}
+      <a href="{p.url}" target="_blank"><strong>{p.name}</strong></a>{#if !p_isLast} et {/if}
+    {/for},
+    et bien sûr à nos speakers :
+  {#for id in reunions.seasonSpeakerIds(season)}
+    {#let speaker = cdi:speakers.get(id)}
+    {#if speaker.profile}<a href="{speaker.profile}" target="_blank">{speaker.name}</a>{#else}{speaker.name}{/if}{#if !id_isLast}, {/if}
+  {/for}.
+  </p>
+  <p>Un excellent cru, et on se donne rendez-vous en septembre !</p>
+</div>

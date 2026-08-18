@@ -22,7 +22,15 @@ layout: main
 
 
     <div class="span12">
-      {#include partials/upcoming /}
+      {#let future = site.collections.reunions.future}
+      {#let season = cdi:seasons.current}
+      {#if !future.isEmpty}
+        {#include partials/upcoming /}
+      {#else if season.isOver}
+        {#endofseason reunions=site.collections.reunions.past season=season.name /}
+      {#else}
+        <p class="text-center">Pas encore de soirée planifiée, restez connectés !</p>
+      {/if}
     </div>
   </div>
   <footer class="row">
